@@ -105,8 +105,8 @@ module Transpec
     end
 
     def process_be_boolean(be_boolean)
-      return unless @rspec_version.be_truthy_available?
       return unless @configuration.convert_deprecated_method?
+      return unless @rspec_version.be_truthy_available?
 
       case @configuration.boolean_matcher_type
       when :conditional
